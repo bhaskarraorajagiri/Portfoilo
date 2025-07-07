@@ -2,8 +2,8 @@ import style from './Project.module.css';
 import BlackJack from '../../assets/blackjack.jpg'
 import Calculator from '../../assets/calculator.jpg'
 import Extension from '../../assets/extension.jpg'
+import Cards from './Cards';
 
-import Cards from './cards';
 
 function Project() {
   return (
