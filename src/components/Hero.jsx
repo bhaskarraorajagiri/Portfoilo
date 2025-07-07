@@ -8,7 +8,7 @@ import  GithubLight from "../assets/github-light.svg"
 import  GithubDark from "../assets/github-dark.svg"
 import  InstagramDark from "../assets/instagram-dark.png"
 import  InstagramLight from "../assets/instagram-light.png"
-import CV from "../assets/BHASKAR RESUME.docx"
+import CV from "../assets/Bhaskar-Res.pdf" 
 import { useTheme } from './ThemeContext'
 import style from './HeroStyle.module.css'
 function Hero() {
@@ -25,14 +25,14 @@ function Hero() {
         </div>
         <div className={style.info}>
           <h1>Bhaskar Rao <br /> Rajagiri</h1>
-          <h2>Computer Science Engineer</h2>
+          <h2>{`Computer Science Engineer (Cybersecurity)`}</h2>
           <span>
           <a href="https://www.linkedin.com/in/bhaskar-rao-rajagiri-143762314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
             <img src={linkedinIcon} alt="Linkedin-Icon" />
           </a>
-          <a href="https://www.instagram.com/mr._.bhaskar37">
+          {/* <a href="https://www.instagram.com/mr._.bhaskar37">
             <img src={InstagramIcon} alt="Instagram-Icon" />
-          </a>
+          </a> */}
           <a href="https://github.com/bhaskarraorajagiri">
             <img src={GithubIcon} alt="Github-Icon" />
           </a>
