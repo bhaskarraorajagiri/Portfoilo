@@ -3,12 +3,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 0 16px;
 }
 
-.Container h1 {
+.sectionTitle {
   text-align: center;
   margin-bottom: 60px;
   color: var(--text-color);
+  transition: var(--transition);
 }
 
 .ProjectContainer {
@@ -16,22 +18,23 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  padding: 0 20px;
 }
 
 .cardWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   width: 220px;
   min-height: 320px;
-  background-color: var(--card-bg);
+  background-color: var(--project-card-bg);
   border-radius: 20px;
   padding: 20px;
   box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 200ms ease-in-out, background-color 300ms;
+  box-shadow: 0 4px 8px var(--project-card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.cardWrapper:hover {
+  transform: perspective(800px) rotateY(3deg) rotateX(3deg) scale(1.05);
+  box-shadow: 0 6px 16px var(--project-card-hover-shadow);
 }
 
 .cardWrapper img {
@@ -42,22 +45,24 @@
   margin-bottom: 10px;
 }
 
-a {
-  width: 100%;
-  text-decoration: none;
-}
-
-a:hover .cardWrapper {
-  transform: scale(1.05);
-}
-
 .cardWrapper h3 {
   font-size: 1.1rem;
   margin-bottom: 8px;
   color: var(--text-color);
+  transition: var(--transition);
 }
 
 .cardWrapper p {
   font-size: 0.9rem;
   color: var(--subtext-color);
+  transition: var(--transition);
+}
+
+.projectQuote {
+  margin-top: 40px;
+  font-size: 1.1rem;
+  color: var(--subtext-color);
+  font-style: italic;
+  font-family: monospace;
+  transition: var(--transition);
 }
