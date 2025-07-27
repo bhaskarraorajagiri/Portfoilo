@@ -1,5 +1,6 @@
 import React from 'react'
-import HeroImg from "../assets/hero-img.png"
+import HeroImg from "../assets/profilepic.jpg"
+//C:\Users\Bhaskar\OneDrive\Desktop\CodSoft\portfolio\src\assets\profilepic.jpg
 import sun from "../assets/sun.svg"
 import moon from "../assets/moon.svg"
 import  linkedinLight from "../assets/linkedin-light.svg"
@@ -20,7 +21,13 @@ function Hero() {
   return (
     <section id='hero' className={style.container}>
         <div className={style.colorModeContainer}>
-            <img className={style.hero} src={HeroImg} alt="Profile-pic" />
+            <img
+              className={style.hero}
+              src={HeroImg}
+              alt="Profile-pic"
+              onError={(e) => { e.target.onerror = null; e.target.src = "https://ui-avatars.com/api/?name=Bhaskar+Rao&size=300&background=random"; }}
+            />
+
             <img className={style.colorMode} src={themeIcon} alt="color mode icon" onClick={toggleTheme}/>
         </div>
         <div className={style.info}>
