@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 
-const Navbar = () => {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
@@ -86,4 +86,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
