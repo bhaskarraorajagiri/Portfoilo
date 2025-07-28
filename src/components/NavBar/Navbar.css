@@ -7,14 +7,12 @@
   padding: 15px 25px;
   background-color: var(--background-color);
   color: var(--text-color);
-  border-bottom: 1px solid var(--border-color); /* Assuming --border-color is globally defined or should be */
+  border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
-  position: sticky;
-  top: 0;
 }
 
 .navbar-brand {
@@ -30,9 +28,7 @@
   margin: 0;
   padding: 0;
   gap: 20px;
-  /* --- NEW: Push nav links to the right --- */
   margin-left: auto;
-  /* --- END NEW --- */
 }
 
 .nav-links li a {
@@ -53,10 +49,8 @@
 .nav-icons {
   display: flex;
   gap: 15px;
-  align-items: center;
-  /* --- NEW: Add a small gap between nav-links and nav-icons if needed (optional) --- */
-  margin-left: 20px; /* Adjust this value as needed */
-  /* --- END NEW --- */
+  align-items: center; /* This aligns the buttons themselves */
+  margin-left: 20px;
 }
 
 .theme-toggle,
@@ -65,27 +59,36 @@
   border: none;
   cursor: pointer;
   color: var(--text-color);
-  padding: 5px;
+  padding: 0; /* Control sizing via width/height and content alignment */
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
 
-/* --- NEW: Decrease theme toggle button size --- */
-.theme-toggle {
-  width: 24px;
-  height: 24px;
+  /* Explicitly set size and center content */
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.1rem; /* Adjust emoji size here */
+  line-height: 1; /* Helps, but might not be enough for emojis */
+
+  /* --- NEW: Vertical adjustment for the emoji --- */
+  position: relative; /* Needed for top/transform */
+  transform: translateY(-2px); /* Nudge up by 2px. Experiment with -1px, -2px, -3px */
+  /* OR use top: -2px; if transform doesn't give desired result */
 }
 
-
-
-/* Ensure menu-toggle retains its size if different */
+/* Ensure menu-toggle retains its size */
 .menu-toggle {
-  font-size: 1.2rem; /* Keep existing size or adjust if needed */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  padding: 5px;
+  border-radius: 55px; /* Rounded button for hamburger */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1.2rem;
 }
-/* --- END NEW --- */
 
 .theme-toggle:hover,
 .menu-toggle:hover {
@@ -108,7 +111,6 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     min-width: 150px;
     transition: var(--transition);
-    /* --- IMPORTANT for mobile: Remove margin-left: auto; for mobile dropdown --- */
     margin-left: 0;
   }
 

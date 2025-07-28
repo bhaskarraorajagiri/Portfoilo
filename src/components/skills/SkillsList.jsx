@@ -1,12 +1,14 @@
-import React from 'react'
+// SkillsList.jsx
+import React from 'react';
+import style from './Skill.module.css'; // Make sure it imports its own style module or shares Skill.module.css
 
-function SkillsList({src,skill}) {
+const SkillsList = ({ skill }) => { // Removed 'src' prop as it's no longer needed
   return (
-    <span>
-        <img src={src} alt="checkmark logo" />
-        <p>{skill}</p>
-    </span>
-  )
-}
+    <div className={style.skillItem}>
+      {/* Removed the img tag: <img src={src} alt="Checkmark Icon" /> */}
+      <p>{skill}</p>
+    </div>
+  );
+};
 
 export default SkillsList;
