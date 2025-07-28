@@ -1,0 +1,129 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color); /* Assuming --border-color is globally defined or should be */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  position: sticky;
+  top: 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  /* --- NEW: Push nav links to the right --- */
+  margin-left: auto;
+  /* --- END NEW --- */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--btn-color);
+}
+
+.nav-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  /* --- NEW: Add a small gap between nav-links and nav-icons if needed (optional) --- */
+  margin-left: 20px; /* Adjust this value as needed */
+  /* --- END NEW --- */
+}
+
+.theme-toggle,
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- NEW: Decrease theme toggle button size --- */
+.theme-toggle {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* Ensure menu-toggle retains its size if different */
+.menu-toggle {
+  font-size: 1.2rem; /* Keep existing size or adjust if needed */
+}
+/* --- END NEW --- */
+
+.theme-toggle:hover,
+.menu-toggle:hover {
+  background-color: rgba(var(--text-color-rgb), 0.2);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 25px;
+    background-color: var(--background-color);
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    transition: var(--transition);
+    /* --- IMPORTANT for mobile: Remove margin-left: auto; for mobile dropdown --- */
+    margin-left: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Hide menu toggle on desktop */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}

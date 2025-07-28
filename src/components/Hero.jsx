@@ -19,7 +19,7 @@ function Hero() {
   const GithubIcon = theme === 'light' ? GithubLight : GithubDark;
   const InstagramIcon = theme === 'light' ? InstagramLight : InstagramDark;
   return (
-    <section id='hero' className={style.container}>
+    <section id='home' className={style.container}>
         <div className={style.colorModeContainer}>
             <img
               className={style.hero}
@@ -28,7 +28,7 @@ function Hero() {
               onError={(e) => { e.target.onerror = null; e.target.src = "https://ui-avatars.com/api/?name=Bhaskar+Rao&size=300&background=random"; }}
             />
 
-            <img className={style.colorMode} src={themeIcon} alt="color mode icon" onClick={toggleTheme}/>
+            {/* <img className={style.colorMode} src={themeIcon} alt="color mode icon" onClick={toggleTheme}/> */}
         </div>
         <div className={style.info}>
           <h1>Bhaskar Rao <br /> Rajagiri</h1>

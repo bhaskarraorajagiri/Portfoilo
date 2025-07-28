@@ -7,9 +7,9 @@
 
 .about-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 40px;
-  color: var(--btn-color);
+  margin-top: 3rem;
 }
 
 .about-content {

@@ -1,5 +1,6 @@
-import Hero from './components/Hero'
 import './App.css'
+import Hero from './components/Hero'
+import Navbar from './components/NavBar/NavBar'
 import About from './components/AboutMe'
 import Project from './components/Projects/Project'
 import Skill from './components/skills/Skill'
@@ -8,6 +9,7 @@ import Footer from './components/Footer/Footer'
 function App() {
   return (
     <>
+      <Navbar/>
       <Hero/>
       <About/>
       <Project/>

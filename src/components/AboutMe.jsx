@@ -5,8 +5,7 @@ import profile from "../assets/profilepic.jpg";
 
 const AboutMe = () => {
   return (
-    <motion.div
-      className="about-container"
+    <motion.div className="about-container" id="about"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -14,14 +13,14 @@ const AboutMe = () => {
       <h2 className="about-title">ABOUT ME</h2>
 
       <div className="about-content">
-        <motion.img
+        {/* <motion.img
           src={profile}
           alt="Profile"
           className="profile-pic"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-        />
+        /> */}
 
         <motion.div
           className="about-text"
@@ -44,7 +43,7 @@ const AboutMe = () => {
 
           <ul className="about-list">
             <li>⚡ Backend Development with Node.js & MongoDB</li>
-            <li>🔐 Cybersecurity & Ethical Hacking enthusiast</li>
+            <li>🔐 Cybersecurity & Software Development enthusiast</li>
             <li>🧠 Tech explorer & problem solver</li>
             <li>🤝 Open to internships and collaborations</li>
           </ul>
